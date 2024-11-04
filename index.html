@@ -3,75 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Akin Holo Calculator</title>
+  <title>Calculator | By Akin Holo</title>
 
   <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+     
       main {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          max-width: 500px;
-          background-color: #000;
-          border-radius: 10px;
+        padding: 10px 5px 5px 5px;
+        background-color: #003D5B;
+        background-color: #023047;
+        border-radius: 5px;
+        width: 300px;
       }
 
-      .btn-area {
-          display: flex;
+      hr {
+        width: 35%; 
+      }
+
+      input {
+        width: 100%;
+        padding: 15px 0;
+        text-align: right;
+        margin: 0 0 10px 0;
+        background-color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 22px;
+      }
+
+      .row {
+        display: flex;
+      }
+
+      button {
+        color: #fff;
+        width: 80px;
+        height: 80px;
+        margin: 1px;
+        font-weight: bold;
+        font-size: 22px;
+        border: none;
+        border-radius: 5px;
+      }
+      button:active {
+        background-color: transparent;
+      }
+
+      .zero-btn {
+        width: 160px;
+        background-color: #8ECAE6;
+      }
+
+          /* button colour */
+      .grey-btn {
+        background-color: #8ECAE6;
+      }
+      .white-btn {
+        color: #000;
+        background-color: #fff;
       }
       .yellow-btn {
-          display: flex;
-          flex-direction: column;
-          gap: 20px
+        background-color: #FB8500;
       }
-      .yellow-btn > * {
-          background-color: #ffff00;
-          border-radius: 50%;
-      } 
   </style>
 </head>
 <body>
-  <main class="container">
-    <section class="screen-wrapper">
-      <div class="summary-screen">
+  <main>
+      <hr> 
 
-      </div>
-      <div class="result-screen">
-        <input inputmode="numeric" placeholder="0">
-      </div>
+    <section class="screen-area">
+      <input inputmode="numeric" id="screen" placeholder="0" disabled>
     </section>
 
-    <section class="btn-area">
-      <div class="btn-wrapper">
-        <div class="white-btn">
-          <button>AC</button>
-          <button>+/-</button>
-          <button>&#37;</button>
-        </div>
-        <div class="grey-btn">
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>0</button>
-          <button>.</button>
-        </div>
+    <section class="btn">
+      <div class="row first-row">
+        <button class="white-btn">AC</button>
+        <button class="white-btn">+/-</button>
+        <button class="white-btn">&#37;</button>
+        <button class="yellow-btn">&#247;</button>
       </div>
-      <div class="yellow-btn">
-          <button>&#247;</button>
-          <button>&#215;</button>
-          <button>-</button>
-          <button>+</button>
-          <button>=</button>
+      <div class="row second-row">
+        <button class="grey-btn">7</button>
+        <button class="grey-btn">8</button>
+        <button class="grey-btn">9</button>
+        <button class="yellow-btn">&#215;</button>
+      </div> 
+      <div class="row third-row">
+        <button class="grey-btn">4</button>
+        <button class="grey-btn">5</button>
+        <button class="grey-btn">6</button>
+        <button class="yellow-btn">-</button>
+      </div> 
+      <div class="row fouth-row">
+        <button class="grey-btn">1</button>
+        <button class="grey-btn">2</button>
+        <button class="grey-btn">3</button>
+        <button class="yellow-btn">+</button>
       </div>
-
+      <div class="row last-row">
+        <button class="zero-btn">0</button>
+        <button class="grey-btn">.</button>
+        <button class="yellow-btn">=</button>
+      </div>
     </section>
-    <hr>
   </main>
 </body>
 </html>
