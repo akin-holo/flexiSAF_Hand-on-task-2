@@ -4,8 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Akin Holo Calculator</title>
+
+  <style>
+      main {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          max-width: 500px;
+          background-color: #000;
+          border-radius: 10px;
+      }
+
+      .btn-area {
+          display: flex;
+      }
+      .yellow-btn {
+          display: flex;
+          flex-direction: column;
+          gap: 20px
+      }
+      .yellow-btn > * {
+          background-color: #ffff00;
+          border-radius: 50%;
+      } 
+  </style>
 </head>
 <body>
-    
+  <main class="container">
+    <section class="screen-wrapper">
+      <div class="summary-screen">
+
+      </div>
+      <div class="result-screen">
+        <input inputmode="numeric" placeholder="0">
+      </div>
+    </section>
+
+    <section class="btn-area">
+      <div class="btn-wrapper">
+        <div class="white-btn">
+          <button>AC</button>
+          <button>+/-</button>
+          <button>&#37;</button>
+        </div>
+        <div class="grey-btn">
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>0</button>
+          <button>.</button>
+        </div>
+      </div>
+      <div class="yellow-btn">
+          <button>&#247;</button>
+          <button>&#215;</button>
+          <button>-</button>
+          <button>+</button>
+          <button>=</button>
+      </div>
+
+    </section>
+    <hr>
+  </main>
 </body>
 </html>
